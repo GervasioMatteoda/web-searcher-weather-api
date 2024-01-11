@@ -1,0 +1,126 @@
+/* Importar Montserrat desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Estilo Básico */
+body {
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #292b2c;
+}
+
+/* Estilo de la Tarjeta */
+.weather-card {
+  background-color: #4285f4;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Estilo del Título */
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Estilo del Resultado */
+.result {
+  min-height: 75px;
+  min-width: 75px;
+  height: auto;
+  width: auto;
+  margin: 20px auto;
+
+  /* Estilo Cargador */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Estilo del Cargador (Spinner) */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  margin-bottom: 20px;
+}
+
+/* Estilo del Mensaje */
+.input-message {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Estilo del Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilo de las Etiquetas ~ Provincia & Localidad*/
+label {
+  font-size: 16px;
+  margin: 5px 0 -5px;
+}
+
+/* Estilo de los Drop-Down List*/
+select,
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Estilo del Botón */
+button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #34a853;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Estilo del Botón s/Mouse */
+button:hover {
+  background-color: #2d8e25;
+}
+
+/* Movimiento del Loader */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo p/Responsive Design */
+@media only screen and (max-width: 600px) {
+  .weather-card {
+    width: 90%;
+  }
+}

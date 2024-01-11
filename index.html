@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherApp</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Creación de Tarjeta & Título -->
+  <div class="weather-card">
+
+    <h1>Buscador de Clima</h1>
+
+    <!-- Espacio p/Resultado -->
+    <div id="result" class="result">
+      <div id="loader" class="loader"></div>
+      <div id="input-message" class="input-message">Por favor, selecciona la provincia y localidad.</div>
+    </div>
+
+    <form id="weather-form">
+
+      <!-- Drop-Down List p/Provincias -->
+      <label for="select_provincias">Provincia:</label>
+      <select id="select_provincias">
+        <option value="Seleccione una provincia">Seleccione una provincia</option>
+      </select>
+
+      <!-- Drop-Down List p/Localidades -->
+      <label for="select_localidades">Localidad:</label>
+      <select id="select_localidades">
+        <option value="Seleccione una localidad">Seleccione una localidad</option>
+      </select>
+
+      <!-- Botón Enviar -->
+      <button type="submit" id="consultar">Consultar</button>
+
+    </form>
+
+  </div>
+
+  <script src="js/argentina-api.js"></script>
+  <script src="js/clima-api.js"></script>
+</body>
+
+</html>
